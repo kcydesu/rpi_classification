@@ -10,5 +10,5 @@ setup(
     author_email='cabruno98@gmail.com',
     description='Class using AlexNet to classify images',
     install_requires=['torch','torch-vision'],
-    package_data={'data', ['*.txt']}
+    package_data={'data': ['*.txt']}
 )
