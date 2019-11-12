@@ -2,6 +2,7 @@ from torchvision import models
 import torch
 from PIL import Image
 from torchvision import transforms
+import pkg_resources
 
 
 class SexyNet:
@@ -24,13 +25,14 @@ class SexyNet:
         self.classNames = []
 
         img = Image.open(self.img_file)
-        img_t = self.transform(img)
+        img_t = self._transform(img)
         batch_t = torch.unsqueeze(img_t, 0)
 
         self._alexnet.eval()
         out = self._alexnet(batch_t)
+        labelfile = pkg_resources.resource_filename('deepnet','imagenet_classes.txt')
 
-        with open('imagenet_classes.txt') as f:
+        with open(labelfile) as f:
             labels = [line.strip() for line in f.readlines()]
 
         percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
