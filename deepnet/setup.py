@@ -8,5 +8,7 @@ setup(
     license='',
     author='Casey Bruno',
     author_email='cabruno98@gmail.com',
-    description='Class using AlexNet to classify images'
+    description='Class using AlexNet to classify images',
+    install_requires=['torch','torch-vision'],
+    package_data={'data', ['*.txt']}
 )
