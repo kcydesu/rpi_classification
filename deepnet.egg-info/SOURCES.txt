@@ -1,0 +1,10 @@
+README.md
+deepnet/__init__.py
+deepnet/deepclassify.py
+deepnet/setup.py
+deepnet.egg-info/PKG-INFO
+deepnet.egg-info/SOURCES.txt
+deepnet.egg-info/dependency_links.txt
+deepnet.egg-info/requires.txt
+deepnet.egg-info/top_level.txt
+test/test.py
