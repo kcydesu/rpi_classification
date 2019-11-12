@@ -40,7 +40,7 @@ class SexyNet:
         _, indices = torch.sort(out, descending=True)
         for idx in indices[0][:5]:
             self.classNames.append(labels[idx])
-            self.classProbs.append(percentage[idx])
+            self.classProbs.append(percentage[idx].item())
 
     def getclass(self):
         return self.classNames[0], self.classProbs[0]
