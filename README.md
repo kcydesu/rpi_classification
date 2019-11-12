@@ -1,2 +1,2 @@
 # rpi_classification
-Implementation of pytorch on Raspberry Pi.
+Implementation of PyTorch on Raspberry Pi.
